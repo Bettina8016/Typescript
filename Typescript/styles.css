@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto';
+  box-sizing: border-box;
+  font-family: 'Bungee', cursive;
+}
+
+.type {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items:right;
+  justify-content: center;
+  position: fixed;
+  width:100%;
+  height: 100vh;
+  background: url('img/stars_background.png');
+}
+.script{ 
+    display: inline-block;
+    background-color: #7b38d8;
+    padding: 20px;
+    position: absolute;
+    top:200px;
+    right:20px;
+    width: 200px;
+    color: #ffffff;
+    text-align: center;
+    border: 4px double #cccccc;
+    border-radius: 10px; 
+    font-size: 28px;
+    cursor: pointer; /* add this line */
+    margin: 5px; /* add this line */
+  }
+
+
+/* .left h1 {
+  position: absolute;
+  font-size: 2.2rem;
+  top: 25%;
+  left: 25%;
+  transform: translate(-20%, -20%);
+} */
+
+.left a {
+  text-decoration: none;
+  color: crimson;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.left a:hover {
+  transition: 0.3s;
+  -webkit-box-shadow: 0 5px 3px -3px #777;
+  -moz-box-shadow: 0 5px 3px -3px #777;
+  box-shadow: 0 5px 3px -3px #777;
+}
+
+body.body-state1 .rocket {
+  transition: none;
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+  bottom: 1500px;
+}
+
+body.body-state2 .rocket {
+  background: url('img/rocket-state2.gif');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+  background: url('img/rocket-state3.gif');
+}
+
+body.body-state5 .rocket {
+  background: url('img/boom.png');
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5 {
+  display: none;
+}
+
+body.body-state1 .state1 {
+  display: block;
+}
+body.body-state2 .state2 {
+  display: block;
+}
+body.body-state3 .state3 {
+  display: block;
+}
+body.body-state4 .state4 {
+  display: block;
+}
+body.body-state5 .state5 {
+  display: block;
+}
+
+.green_ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: url(img/ground.png);
+}
+
+.rocket {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+  width: 150px;
+  height: 270px;
+  background: url('img/rocket-state1.png') no-repeat center/cover;
+  transition: bottom 10s;
+}
+
+.nervous {
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  background: url('img/nervous.png');
+  width: 223px;
+  height: 100px;
+  margin-left: -200px;
+  display: none;
+}
+
+.nervous.show {
+  display: block;
+}
+
+.cant_wait {
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  background: url('img/cant-wait.png') no-repeat;
+  width: 206px;
+  height: 65px;
+  margin-right: 200px;
+  display: none;
+}
+
+.cant_wait.show {
+  display: block;
+}
+
+
+
+
